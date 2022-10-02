@@ -1,0 +1,306 @@
+<html lang="en">
+<!--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*-HEAD-*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Searching system</title>
+
+
+    <!--JQuery-->
+    <script src="docs/jquery-3.6.0.min.js"></script>
+
+
+    <!--BootStrap-->
+    <script src="bootstrap.js"></script>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"></script>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css"
+        integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+
+
+    <!--Typographies-->
+    <!--'Lato'-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
+
+
+    <!--FICHIERS CSS-->
+    <link rel="stylesheet" href="css/style.css">
+    <link href="css/searchBar.css" rel="stylesheet" />
+
+
+
+    <!--FICHIERS JavaScript-->
+    <link rel="stylesheet" href="js/script.js">
+
+    <!--Autres liens-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,600,700" rel="stylesheet" />
+
+</head>
+
+
+
+
+
+<!--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*-BODY-*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*--*-->
+
+<body data-spy="scroll" data-target=".navbar" data-offset="60">
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul  class="nav navbar-nav">
+                    <!-- <li><a href="#about">About</a></li> -->
+                    <li ><a class="list" href="#about">About</a></li>
+                    <li ><a class="list" href="#search">Search</a></li>
+                    <li><a class="list" href="#moreSearch">More Search</a></li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!----------ABOUT---------->
+    <section id="about" class="container-fluid">
+        <div class="col-xs-8 col-md-4 profil-picture">
+            <img src="images/logo.png" alt="Espoir">
+        </div>
+
+        <div>
+            <div class="heading">
+                <p class="devise">A powerful sarch system allowing you to navigate easily in our database</p>
+                <p class="acess"> More accessibility <br> More discoverability</p>
+                <a href="docs/report.pdf" class="button1">Download our report</a>
+            </div>
+        </div>
+    </section>
+
+
+    
+
+
+
+
+    <!----------search---------->
+    <section id="search">
+        <div class="blue-divider"></div>
+        <div class="heading">
+            <h2>SEARCH</h2>
+        </div>
+
+        <div class="s009" id="searchBar">
+            <form>
+                <div class="inner-form">
+                    <div class="basic-search">
+                        <div class="input-field">
+                            <input id="search" type="text" placeholder="Type Keywords" />
+                            <div class="icon-wrap">
+                                <svg class="svg-inline--fa fa-search fa-w-16" fill="#ccc" aria-hidden="true"
+                                    data-prefix="fas" data-icon="search" role="img" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 512 512">
+                                    <path
+                                        d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z">
+                                    </path>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="advance-search">
+                        <span class="desc">ADVANCED SEARCH</span>
+                        <div class="row">
+                            <div class="input-field">
+                                <div class="input-select">
+                                    <select data-trigger="" name="choices-single-defaul">
+                                        <option placeholder="" value="">Accessories</option>
+                                        <option>Subject b</option>
+                                        <option>Subject c</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="input-field">
+                                <div class="input-select">
+                                    <select data-trigger="" name="choices-single-defaul">
+                                        <option placeholder="" value="">Color</option>
+                                        <option>Subject b</option>
+                                        <option>Subject c</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="input-field">
+                                <div class="input-select">
+                                    <select data-trigger="" name="choices-single-defaul">
+                                        <option placeholder="" value="">Size</option>
+                                        <option>Subject b</option>
+                                        <option>Subject c</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row second">
+                            <div class="input-field">
+                                <div class="input-select">
+                                    <select data-trigger="" name="choices-single-defaul">
+                                        <option placeholder="" value="">Sale</option>
+                                        <option>Subject b</option>
+                                        <option>Subject c</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="input-field">
+                                <div class="input-select">
+                                    <select data-trigger="" name="choices-single-defaul">
+                                        <option placeholder="" value="">Time</option>
+                                        <option>Last time</option>
+                                        <option>Today</option>
+                                        <option>This week</option>
+                                        <option>This month</option>
+                                        <option>This year</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="input-field">
+                                <div class="input-select">
+                                    <select data-trigger="" name="choices-single-defaul">
+                                        <option placeholder="" value="">Type</option>
+                                        <option>Subject b</option>
+                                        <option>Subject c</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row third">
+                            <div class="input-field">
+                                <div class="result-count">
+                                    <span>108 </span>results
+                                </div>
+                                <div class="group-btn">
+                                    <button class="btn-delete" id="delete">RESET</button>
+                                    <button class="btn-search">SEARCH</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <script src="js/extention/choices.js"></script>
+        <script>
+            const customSelects = document.querySelectorAll("select");
+            const deleteBtn = document.getElementById('delete')
+            const choices = new Choices('select',
+                {
+                    searchEnabled: false,
+                    itemSelectText: '',
+                    removeItemButton: true,
+                });
+            deleteBtn.addEventListener("click", function (e) {
+                e.preventDefault()
+                const deleteAll = document.querySelectorAll('.choices__button')
+                for (let i = 0; i < deleteAll.length; i++) {
+                    deleteAll[i].click();
+                }
+            });
+
+        </script>
+          <div>
+            <h1 class="answers">Your  search  results  will  appear  here . . . </h1>
+            <i  style="font-size:200px; color:grey; opacity:0.5;margin-left:620px;"class="fa-solid fa-magnifying-glass"></i>
+          
+          </div>
+      
+      
+
+       
+    </section>
+
+    <!----------PORTFOLIO---------->
+    <section id="moreSearch">
+        <div class="container">
+            <div class="white-divider"></div>
+            <div class="heading">
+                <p style="font-weight:bold;color:grey;font-size:30px">Most wanted</p>
+            </div>
+            <div  class="grille">
+                <div style="background-color:white"  class="grid-item">
+                    <h1>TITRE:</h1>
+                    <p>Mots clés:</p>
+                </div>
+                <div style="background-color:white"  class="grid-item">
+                    <h1>TITRE:</h1>
+                    <p>Mots clés:</p>
+                </div>
+                <div style="background-color:white"  class="grid-item">
+                    <h1>TITRE:</h1>
+                    <p>Mots clés:</p>
+                </div>
+                <div style="background-color:white"  class="grid-item">
+                    <h1>TITRE:</h1>
+                    <p>Mots clés:</p>
+                </div>
+                <div style="background-color:white"  class="grid-item">
+                    <h1>TITRE:</h1>
+                    <p>Mots clés:</p>
+                </div>
+                <div style="background-color:white"  class="grid-item">
+                    <h1>TITRE:</h1>
+                    <p>Mots clés:</p>
+                </div>
+              
+               
+             </div></div>
+             
+              
+
+
+       
+    </section>
+
+
+    <footer class="text-center">
+        <a href="#about">
+            <span class="glyphicon glyphicon-chevron-up"></span>
+        </a>
+        <h5> NASA - Space Apps Challenge 2022 <br> Team LEN</h5>
+    </footer>
+    <script src="js/main.js"></script>
+    <script src="https://kit.fontawesome.com/75b9c88538.js" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
+
+
+<!---------------------------RESTE--------------------------->
+<!-- 
+*Scroll spy
+*icon bar à droite
+*carousel de recommandations
+*Expérience professionnelle
+
+-->
